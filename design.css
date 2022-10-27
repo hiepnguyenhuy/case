@@ -1,0 +1,46 @@
+#logo {
+    width: 30%;
+    height: 120px;
+}
+
+
+#id1 {
+    width: 1000px;
+    height: 400px;
+    /*float: right;*/
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    border-color: aquamarine;
+    mso-cellspacing: 1px;
+    color: brown;
+}
+
+
+#id2 {
+    width: 500px;
+    height: 400px;
+    display: inline-block;
+    /*float: left;*/
+    text-align: center;
+    font-size: 25px;
+    background-color: wheat;
+}
+
+nav{
+    background-color:#47bdec;
+}
+nav a{
+    display:inline-block;
+    padding:10px;
+    font-size:20px;
+    color:white;
+    text-decoration:none;
+}
+nav a:hover{
+    background-color:#333;
+}
+
+
+
+

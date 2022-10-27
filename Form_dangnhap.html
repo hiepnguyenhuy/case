@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form đăng nhập</title>
+    <script src="thongtin_dangnhap_dangky.js"></script>
+
+    <style>
+        .Register {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 980px;
+            margin: 0 auto;
+            height: 100vh;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bieu {
+            background: ghostwhite;
+            width: 400px;
+            height: 500px;
+            border-radius: 20px;
+            padding: 20px 20px;
+        }
+
+        table {
+            line-height: 40px;
+            height: 40px;
+            width: 400px;
+        }
+
+        input {
+            border-radius: 10px;
+            width: 200px;
+            height: 30px;
+        }
+
+        .nutnhan {
+            padding-top: 30px;
+
+        }
+        button {
+            width: 100px;
+            height: 30px;
+        }
+
+        label {
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+<div class="Register">
+    <div class="bieu">
+        <h1 style="margin-bottom: 40px">Đăng ký tài khoản</h1>
+
+
+    <table>
+        <tr>
+            <td>Tên Đăng Nhập</td>
+            <td><input id="tendangnhap" name="tendangnhap" type="text"></td>
+        </tr>
+        <tr>
+            <td>Mật khẩu</td>
+            <td><input id="matkhau" name="matkhau" type="password"></td>
+        </tr>
+
+    </table>
+        <div class="nutnhan">
+
+                <button onclick="dangnhap()">Đăng Nhập</button></td>
+                <button onclick="location.href='Form_dangky.html' ">Đăng ký</button> </td>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+let tapthongtin = JSON.parse(localStorage.getItem("tapthongtin"));
+if(tapthongtin===null){
+    tapthongtin=[];
+}
+
+function dangnhap() {
+    let tendangnhap = document.getElementById("tendangnhap").value;
+    let matkhau = document.getElementById("matkhau").value;
+        for (let i=0;i<tapthongtin.length;i++) {
+        if(tapthongtin[i].tendangnhap ===tendangnhap && tapthongtin[i].matkhau===matkhau){
+    window.location = "phanquanlyhocvien.html";
+return;
+        }
+    }
+    alert("Đăng nhập thất bại");
+}
+</script>
+</body>
+</html>

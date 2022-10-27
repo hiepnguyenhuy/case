@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phần quản lý</title>
+</head>
+<link rel="stylesheet" href="design.css">
+<body style="background: url('nenquanlyhv2.jpg') top center / cover no-repeat">
+<h1 style="background: orange; text-align: center">
+  QUẢN LÝ HỌC VIÊN
+</h1>
+<div>
+  <div style="width: 45%; display: inline-block">
+    <table id="id2">
+      <tr>
+        <th colspan="2" style="background: silver; text-align: center;width: 500px;height: 50px">Thông tin học viên</th>
+      </tr>
+      <tr>
+        <td>ID</td>
+        <td>
+          <input style="height:30px; width:300px;font-size: 20px " type="number" min="0" id="id">
+        </td>
+      </tr>
+      <tr>
+        <td>Họ tên</td>
+        <td>
+          <input style="height:30px; width:300px;font-size: 20px " type="text" id="hoten">
+        </td>
+      </tr>
+      <tr>
+        <td>Ngày sinh</td>
+        <td>
+          <input style="height:30px; width:300px;font-size: 20px" type="text"  id="ngaysinh">
+        </td>
+      </tr>
+      <tr>
+        <td>Giới tính</td>
+        <td>
+          <select name="Giới tính" id="gioitinh" style="height:30px; width:300px;font-size: 20px" >
+            <option value="Nu">Nữ</option>
+            <option value="Nam">Nam</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Lớp</td>
+        <td>
+          <input style="height:30px; width:300px;font-size: 20px" type="text" id="lop">
+        </td>
+      </tr>
+      <tr>
+        <td>Ảnh</td>
+        <td>
+          <input style="height:30px; width:300px;font-size: 20px" type="text" id="anh">
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button style="height:30px; width:100px;color: crimson" onclick="them()">ADD</button>
+          <button style="height:30px; width:100px;color: firebrick" onclick="save()">SAVE</button>
+
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div style="width: 53%; display: inline-block">
+
+    <table id="id1">
+      <tr>
+        <th colspan="8" style="background: silver; text-align: center;width: 1000px;height: 50px">Danh sách học viên</th>
+      </tr>
+      <tr>
+        <th style="height:30px; width:50px" >ID</th>
+        <th style="height:30px; width:200px" >Họ tên</th>
+        <th style="height:30px; width:150px" >Ngày sinh</th>
+        <th style="height:30px; width:100px" >Giới tính</th>
+        <th style="height:30px; width:100px" >Lớp</th>
+        <th style="height:30px; width:200px " >Ảnh</th>
+        <th colspan="2" style="height:30px; width:500px ">Tùy chọn</th>
+      </tr>
+      <tr>
+        <tbody style="height:30px; width:300px;font-size: 20px " id="show"></tbody>
+      </tr>
+    </table>
+
+  </div>
+</div>
+
+
+</body>
+</html>
+<script src="thongtinhocvien.js"></script>

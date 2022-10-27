@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FORM ĐĂNG KÝ</title>
+    <script src="thongtin_dangnhap_dangky.js"></script>
+    <meta charset="UTF-8">
+    <title>Register</title>
+        <style>
+            .Register {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 980px;
+                margin: 0 auto;
+                height: 100vh;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .bieu {
+                background: ghostwhite;
+                width: 400px;
+                height: 500px;
+                border-radius: 20px;
+                padding: 20px 20px;
+            }
+
+            table {
+                line-height: 40px;
+                height: 40px;
+                width: 400px;
+            }
+
+            input {
+                border-radius: 10px;
+                width: 200px;
+                height: 30px;
+            }
+
+            .nutnhan {
+                padding-top: 30px;
+
+            }
+            button {
+                width: 100px;
+                height: 30px;
+            }
+
+            label {
+                float: left;
+            }
+
+        </style>
+
+
+</head>
+
+<body>
+<div class="Register">
+    <div class="bieu">
+        <h1 style="margin-bottom: 40px">Đăng ký tài khoản</h1>
+
+
+<table>
+    <tr>
+        <td>Tên Đăng Nhập</td>
+        <td><input id="tendangnhap" name="tendangnhap" type="text"></td>
+    </tr>
+    <tr>
+        <td>Mật Khẩu</td>
+        <td><input id="matkhau" name="matkhau" type="password"></td>
+    </tr>
+    <tr>
+        <td>Họ và Tên</td>
+        <td><input id="hovaten" type="text"></td>
+    </tr>
+
+</table>
+        <div class="nutnhan">
+
+                    <button onclick="dangky()">Đăng Ký</button>
+
+        </div>
+    </div>
+</div>
+<script>
+    let tapthongtin = JSON.parse(localStorage.getItem("tapthongtin"));
+    if (tapthongtin === null) {
+        tapthongtin = [];
+    }
+
+    function dangky() {
+        let tendangnhap = document.getElementById("tendangnhap").value;
+        let matkhau = document.getElementById("matkhau").value;
+        let nguoidung = new thongtin(tendangnhap, matkhau, hovaten);
+        tapthongtin.push(nguoidung);
+        localStorage.setItem("tapthongtin", JSON.stringify(tapthongtin));
+       window.location = "Form_dangnhap.html";
+    }
+</script>
+
+</body>
+</html>
