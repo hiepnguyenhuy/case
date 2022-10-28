@@ -49,7 +49,7 @@ show();
 function xoa(index) {
     taphopsv.splice(index, 1);
     show();
-    // localStorage.setItem("sva",JSON.stringify(taphopsvv));
+    // localStorage.setItem("sva",JSON.stringify(taphopsv));
 }
 function them() {
     let diachia = document.getElementById("id").value;
@@ -61,7 +61,7 @@ function them() {
     let newPerson = new Sinhvien(diachia, hoten, ngaysinh, gioitinh, lop, anh);
     taphopsv.push(newPerson);
     show();
-    // localStorage.setItem("sva",JSON.stringify(taphopsvv));
+    // localStorage.setItem("sva",JSON.stringify(taphopsv));
     clear();
 }
 function clear() {
@@ -85,7 +85,7 @@ function sua(i) {
 
     j = i
     show()
-    // localStorage.setItem("sva",JSON.stringify(taphopsvv));
+    // localStorage.setItem("sva",JSON.stringify(taphopsv));
 
 }
 
@@ -105,5 +105,5 @@ function save() {
     taphopsv[j].Anh = anh;
     show();
     clear();
-    // localStorage.setItem("sva",JSON.stringify(taphopsvv));
+    // localStorage.setItem("sva",JSON.stringify(taphopsv));
 }
