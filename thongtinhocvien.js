@@ -24,6 +24,9 @@ let svb = new Sinhvien(12, "Nguyễn Văn B", "08/07/1991", "Nam", "C07", "nguye
 // let taphopsv = [sva, svb];
 let taphopsv = JSON.parse(localStorage.getItem("sva"));
 
+    if (taphopsv === null) {
+        taphopsv = [];
+    }
 let divShow = document.getElementById("show");
 
 function show() {
