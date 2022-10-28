@@ -19,8 +19,8 @@ class Sinhvien {
 
 }
 
-// let sva = new Sinhvien(11, "Nguyễn Văn A", "07/07/1991", "Nam", "C09", "nguyenvanb.jpg");
-// let svb = new Sinhvien(12, "Nguyễn Văn B", "08/07/1991", "Nam", "C07", "nguyenvanb.jpg");
+let sva = new Sinhvien(11, "Nguyễn Văn A", "07/07/1991", "Nam", "C09", "nguyenvanb.jpg");
+let svb = new Sinhvien(12, "Nguyễn Văn B", "08/07/1991", "Nam", "C07", "nguyenvanb.jpg");
 // let taphopsv = [sva, svb];
 let taphopsv = JSON.parse(localStorage.getItem("sva"));
 
@@ -104,5 +104,6 @@ function save() {
     taphopsv[j].Lop = lop;
     taphopsv[j].Anh = anh;
     show();
+    clear();
     localStorage.setItem("sva",JSON.stringify(taphopsv));
 }
